@@ -1,0 +1,15 @@
+// Add this in your Plugins Section
+
+// Check the ReadMe for Information on each setting
+
+// Whitelister is for those using JetDave's Whitelister Tool - Get with Ignis to make sure it's setup on MySquadStats' end
+
+{
+  "plugin": "Guardian",
+  "enabled": true,
+  "channelID": "",
+  "color": 16761867,
+  "pingGroups": [],
+  "pingHere": false,
+  "warnInGameAdmins": true
+}
