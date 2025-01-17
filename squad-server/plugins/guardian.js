@@ -75,7 +75,10 @@ export default class Guardian extends DiscordBasePlugin {
         }
       );
 
-      if (response.data !== null) {
+      if (
+        response.data.data !== null &&
+        response.data.data.steamID === info.player.steamID
+      ) {
         const admins = this.server.getAdminsWithPermission(
           'canseeadminchat',
           'eosID'
@@ -93,7 +96,7 @@ export default class Guardian extends DiscordBasePlugin {
         const message = {
           embed: {
             title: `Player ${info.player.name} has a BOLO on record!`,
-            description: `This Player is in Guardian's BOLO list. Keep an eye out on this player as a possible Cheater.
+            description: `This Player is in Guardian's BOLO list.\nhttps://canary.discord.com/channels/1174357658971668551/${response.data.data.threadID}\nKeep an eye out on this player as a possible Cheater.
             [${info.player.steamID}](https://steamcommunity.com/profiles/${info.player.steamID})`,
             color: this.options.color,
             fields: [
@@ -120,7 +123,9 @@ export default class Guardian extends DiscordBasePlugin {
               },
               {
                 name: 'BOLO Created',
-                value: response.data.dateAdded,
+                value: `<t:${Math.floor(
+                  new Date(response.data.data.dateAdded).getTime() / 1000
+                )}:f>`,
               },
             ],
             timestamp: new Date().toISOString(),

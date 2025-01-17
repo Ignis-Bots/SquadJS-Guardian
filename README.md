@@ -21,6 +21,10 @@
 
 - This plugin will check if joining players are in Guardian Onlyban's BOLO Players list. BOLO Players are players that we suspect of Cheating but don't yet have enough evidence on them to Ban. If you get a BOLO Player in your Server, monitor them and gather evidence if they are indeed Cheating.
 
+[Example in Discord](https://github.com/Ignis-Bots/SquadJS-Guardian/blob/master/example-discord.png)
+[Example in Game](https://github.com/Ignis-Bots/SquadJS-Guardian/blob/master/example-ingame.png)
+[Example in Guardian Discord](https://github.com/Ignis-Bots/SquadJS-Guardian/blob/master/example-guardian.png)
+
 ## Pre-requesites
 
 - Latest Version of [SquadJS](https://github.com/Team-Silver-Sphere/SquadJS)
