@@ -89,7 +89,7 @@ export default class Guardian extends DiscordBasePlugin {
           if (this.options.warnInGameAdmins)
             await this.server.rcon.warn(
               player.eosID,
-              `[${info.player.name}] - Player has a BOLO on record!`
+              `[${info.player.name}] - Player has a BOLO on record in Guardian!`
             );
         }
 
