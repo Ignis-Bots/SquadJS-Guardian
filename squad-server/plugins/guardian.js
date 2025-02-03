@@ -96,8 +96,7 @@ export default class Guardian extends DiscordBasePlugin {
         const message = {
           embed: {
             title: `Player ${info.player.name} has a BOLO on record!`,
-            description: `This Player is in Guardian's BOLO list.\nhttps://canary.discord.com/channels/1174357658971668551/${response.data.data.threadID}\nKeep an eye out on this player as a possible Cheater.
-            [${info.player.steamID}](https://steamcommunity.com/profiles/${info.player.steamID})`,
+            description: `This Player is in Guardian's BOLO list.\nhttps://canary.discord.com/channels/1174357658971668551/${response.data.data.threadID}\nKeep an eye out on this player as a possible Cheater.\n[Steam Profile](https://steamcommunity.com/profiles/${info.player.steamID})\n[BattleMetrics](https://www.battlemetrics.com/rcon/players?filter[search]=${info.player.steamID}&method=quick&redirect=1)`,
             color: this.options.color,
             fields: [
               {
