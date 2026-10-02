@@ -131,9 +131,7 @@ export default class Guardian extends DiscordBasePlugin {
           },
         };
 
-        if (this.options.pingHere === true) {
-          message.content = `@here`;
-        }
+        message.content = this.options.pingHere === true ? '@here' : '';
 
         if (this.options.pingGroups.length > 0) {
           message.content += ` ${this.options.pingGroups
