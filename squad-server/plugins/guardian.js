@@ -72,6 +72,7 @@ export default class Guardian extends DiscordBasePlugin {
             steamID: info.player.steamID,
             serverName: this.server.serverName,
           },
+          timeout: 10000,
         }
       );
 
@@ -146,7 +147,7 @@ export default class Guardian extends DiscordBasePlugin {
         await this.sendDiscordMessage(message);
       }
     } catch (error) {
-      console.error(error);
+      this.verbose(1, `BOLO check failed for ${info.player.steamID}: ${error.message}`);
     }
   }
 }
